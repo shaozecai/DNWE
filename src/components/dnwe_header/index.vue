@@ -1,5 +1,6 @@
 <template>
     <el-container>
+        <img class="logo" src="../../assets/images/logo.png" alt="">
         <el-menu
         :default-active="activeIndex"
         class="el-menu-demo"
@@ -81,5 +82,11 @@
     }
     .el-submenu__title a{
         color: #ffffff;
+    }
+    .logo{
+        width: 52px;
+        height: 52px;
+        margin-top: 4px;
+        margin-right: 20px;
     }
 </style>
