@@ -6,31 +6,31 @@
         class="el-menu-demo"
         mode="horizontal"
         @select="handleSelect"
-        background-color="#105f5f"
+        background-color="#3c3a39"
         text-color="#fff"
         active-text-color="#ffd04b" v-for="(item) in store.state.menusAll" :key="item.id">
             <!-- 一级导航 -->
             <el-menu-item v-if="!item.subList" v-bind:index="item.id">
-                <a :href="item.url">{{item.name}}</a>
+                <router-link :to="item.url">{{item.name}}</router-link>
             </el-menu-item>
             <!-- 二级导航 -->
             <el-submenu v-if="item.subList" v-bind:index="item.id">
                 <template slot="title" v-if="item.url">
-                    <a :href="item.url">{{item.name}}</a>
+                    <router-link :to="item.url">{{item.name}}</router-link>
                 </template>
                 <template slot="title" v-if="!item.url">{{item.name}}</template>
                 <div v-for="(item2) in item.subList" :key="item2.id">                 
                     <el-menu-item v-if="!item2.subList" v-bind:index="item2.id">
-                        <a :href="item2.url">{{item2.name}}</a>
+                        <router-link :to="item2.url">{{item2.name}}</router-link>
                     </el-menu-item>
                     <el-submenu v-if="item2.subList" v-bind:index="item2.id">
                         <template slot="title" v-if="item2.url">
-                            <a :href="item2.url">{{item2.name}}</a>
+                            <router-link :to="item2.url">{{item2.name}}</router-link>
                         </template>
                         <template slot="title" v-if="!item2.url">{{item2.name}}</template>
                         <div v-for="(item3) in item2.subList" :key="item3.id">
                             <el-menu-item v-bind:index="item3.id">
-                                <a :href="item3.url">{{item3.name}}</a>
+                                <router-link :to="item3.url">{{item3.name}}</router-link>
                             </el-menu-item>
                         </div>                            
                     </el-submenu>
@@ -43,8 +43,6 @@
 
 <script>
     import store from './store'
-    console.log(store);
-    
     export default
         {
             data() {
@@ -65,7 +63,7 @@
                 }
             },
             created(){
-                console.log(this.$store)
+               
             }
         }
 </script>
@@ -84,9 +82,9 @@
         color: #ffffff;
     }
     .logo{
-        width: 52px;
-        height: 52px;
-        margin-top: 4px;
+        width: 42px;
+        height: 42px;
+        margin-top: 9px;
         margin-right: 20px;
     }
 </style>

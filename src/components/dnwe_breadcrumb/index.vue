@@ -1,14 +1,22 @@
 <template>
     <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+        <el-breadcrumb-item v-for="(item,index) in state.breadcrumbs" :key="index" :to="{ path: item.url }">{{item.text}}</el-breadcrumb-item>
+        
     </el-breadcrumb>
 </template>
 
 
 <script>
 export default {
+    data(){
+      return {
+        state:this.$store.state
+      }
+    },
      methods: {
+      
+    },
+    created(){
       
     }
 }
@@ -16,7 +24,6 @@ export default {
 <style scoped>
   .el-breadcrumb{
     padding: 10px;
-    background: #E9EEF3;
+    background: #e5e5e5;
   }
-
 </style>

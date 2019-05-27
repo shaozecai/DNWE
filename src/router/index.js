@@ -7,17 +7,34 @@ const home = function(r){
     r(require('@/modules/home'))
   },'home')
 }
+const github = function(r){
+  require.ensure([],()=>{
+    r(require('@/modules/github'))
+  },'github')
+}
 
 const routes = [
+ 
   {
-    path: '/',
-    name: 'home',
-    component: home
+    "path": "/home",
+    "name": "/home",
+    "component": home,
+    children:[]
+  },
+  {
+    "path": "/github",
+    "name": "/github",
+    "component": github,
+    children:[]
+  },
+  {
+    "path": "/",
+    redirect: '/home' 
   }
 ]
 
-
-
-export default new Router({
+const router = new Router({
   routes
 })
+
+export default router

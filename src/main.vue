@@ -5,9 +5,9 @@
         <dnwe-header></dnwe-header>
       </el-header>
       <el-container>
-        <el-aside width="200px">
+        <!-- <el-aside width="200px">
           <dnwe-aside></dnwe-aside>
-        </el-aside>
+        </el-aside> -->
         <el-container>
           <dnwe-breadcrumb></dnwe-breadcrumb>
           <el-main>
@@ -31,6 +31,9 @@ export default {
     dnweHeader,
     dnweAside,
     dnweBreadcrumb
+  },
+  created(){
+    document.title = this.$store.state.pageTitle;
   }
 }
 </script>
@@ -40,6 +43,9 @@ export default {
     margin: 0;
     padding: 0;
   }
+  a{
+    text-decoration: none;
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -48,7 +54,7 @@ export default {
     color: #2c3e50;
   }
   .el-header, .el-footer {
-    background-color: #105f5f;
+    background-color: #3c3a39;
     color: #fff;
     text-align: center;
     line-height: 60px;
@@ -60,7 +66,7 @@ export default {
   }
   
   .el-aside {
-    background-color: #2f4f4f;
+    background-color: #303030;
     color: #333;
     text-align: center;
     line-height: 200px;
@@ -72,6 +78,7 @@ export default {
     color: #333;
     text-align: center;
     line-height: 160px;
+    min-height: calc(100vh - 132px);
   }
   
   body > .el-container {

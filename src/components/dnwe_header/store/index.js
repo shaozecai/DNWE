@@ -5,85 +5,38 @@ const menuData = [
     {
         id:'F001',
         name:'首页',
-        url:'./'
+        url:'/'
     },
     {
         id:'F002',
-        name:'个人中心',
-        url:'./main'
+        name:'GitHub',
+        url:'/github'
     },
     {
         id:'F003',
-        name:'管理中心',
+        name:'手帐体系',
         subList:[
             {
                 id:'S3001',
-                name:'管理1',                
-                url:'./manage1'
+                name:'阅读',                
+                url:'./read'
             },
             {
                 id:'S3002',
-                name:'管理2',
-                url:'./manage2'
+                name:'笔记',
+                url:'./note'
             },
             {
                 id:'S3003',
-                name:'管理3',
+                name:'总结',
                 url:'./manage3'
             }
         ]
     },
     {
-        id:'F004',
-        name:'系统中心',
-        subList:[
-            {
-                id:'S4001',
-                name:'系统1',
-                subList:[
-                    {
-                        id:'T4001-001',
-                        url:'./system1',
-                        name:'选项1'
-                    },
-                    {
-                        id:'T4001-002',
-                        url:'./system2',
-                        name:'选项2'
-                    }
-                ]
-            },
-            {
-                id:'S4002',
-                name:'系统2',
-                url:'./system3',
-                subList:[
-                    {
-                        id:'T4001-001',
-                        url:'./system1',
-                        name:'选项21'
-                    },
-                    {
-                        id:'T4001-002',
-                        url:'./system22',
-                        name:'选项22'
-                    }
-                ]
-            },
-            {
-                id:'S4003',
-                name:'系统3',
-                url:'./system4'
-            }
-        ]
-    },{
-        id:'F005',
-        name:'角色管理',
-        url:'./user' 
-    },{
         id:'F006',
-        name:'消息中心',
-        url:'./msg' 
+        name:'关于',
+        url:'./about' 
     }
 ];
 

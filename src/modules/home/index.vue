@@ -6,6 +6,20 @@
 
 <script>
 export default {
-    name:'home'
+    name:'home',
+    data(){
+        return {}
+    },
+    methods: {
+      
+    },
+    computed:{
+
+    },
+    created(){
+        let arr = [{text:'首页',url:'/'}]
+        this.$store.commit('setBreadcrumbs',arr);
+        this.$store.commit('setPageTitle','首页');
+    }
 }
 </script>

@@ -5,7 +5,7 @@
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
-            background-color="#2f4f4f"
+            background-color="#303030"
             text-color="#fff"
             active-text-color="#ffd04b"
             index="menu2"
@@ -55,5 +55,7 @@ export default {
 <style scoped>
 .el-menu{
     width: 100%;
+   border-right:solid 1px #303030;
 }
+
 </style>
