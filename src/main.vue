@@ -33,7 +33,7 @@ export default {
     dnweBreadcrumb
   },
   created(){
-    document.title = this.$store.state.pageTitle;
+    
   }
 }
 </script>
@@ -78,7 +78,7 @@ export default {
     color: #333;
     text-align: center;
     line-height: 160px;
-    min-height: calc(100vh - 132px);
+    min-height: calc(100vh - 126px);
   }
   
   body > .el-container {

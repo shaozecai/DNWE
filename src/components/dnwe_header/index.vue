@@ -47,14 +47,13 @@
         {
             data() {
                 return {
-                    activeIndex: '1',
+                    activeIndex: 'F001',
                     store:store
                 };
             },
             methods: {
-               
                 handleSelect(key, keyPath) {
-                    console.log(key, keyPath);
+                    this.activeIndex = key;
                 }
             },
             computed:{

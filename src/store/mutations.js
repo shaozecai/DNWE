@@ -14,6 +14,7 @@ export default {
     },
     // 设置页面标题
     setPageTitle(state,payload){
-        state.pageTitle = payload
+        state.pageTitle = payload;
+        document.title = payload;
     }
 }

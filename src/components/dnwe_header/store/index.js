@@ -19,24 +19,24 @@ const menuData = [
             {
                 id:'S3001',
                 name:'阅读',                
-                url:'./read'
+                url:'/read'
             },
             {
                 id:'S3002',
                 name:'笔记',
-                url:'./note'
+                url:'/note'
             },
             {
                 id:'S3003',
                 name:'总结',
-                url:'./manage3'
+                url:'/sum'
             }
         ]
     },
     {
-        id:'F006',
+        id:'F004',
         name:'关于',
-        url:'./about' 
+        url:'/about' 
     }
 ];
 
