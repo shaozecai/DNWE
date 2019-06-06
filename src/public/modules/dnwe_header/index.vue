@@ -108,6 +108,7 @@
         padding: 0 10px;
         position: absolute;
         right: 10px;
+        color: #ffffff;
     }
     .el-dropdown-menu{
         margin: 0;
